@@ -21,6 +21,18 @@ public class Sorts{
   }
 
   public static void selectionSort(int[] data){
+
+    for (int i=0; i<data.length;i++){
+      int index=i;
+      for (int j=data.length-1;j>=i;j--){
+        if (data[j]<data[index]){
+          index=j;
+        }
+      }
+      int temp= data[index];
+      data[index]=data[i];
+      data[i]=temp;
+    }
    }
 
    /**insertion sort of an int array.
